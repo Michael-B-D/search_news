@@ -1,11 +1,17 @@
 import requests
 import json
 from flask import Flask, render_template, request
+from dotenv import load_env
+import os
+
+
+load_env()
+KEY = os.environ['KEY']
 url = "https://rapidapi.p.rapidapi.com/v1/search"
 
 headers = {
     'x-rapidapi-host': "newscatcher.p.rapidapi.com",
-    'x-rapidapi-key': key
+    'x-rapidapi-key': KEY
     }
     
 app = Flask(__name__, static_folder="templates", static_url_path="")
