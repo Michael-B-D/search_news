@@ -1,0 +1,108 @@
+input{
+    border-radius: 10px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+.top-page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #dadce0;
+    background-color: white;
+    /* credit to google news site - https://news.google.com/ */
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+
+}
+.website-logo{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    border-color: white;
+}
+
+.free-search-input{
+    display: inline-block;
+    height: 30px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+#main-free-search{
+    display: flex;
+}
+
+#free-search{
+    width: 100%;
+}
+
+.optionals-search{
+    display: none;
+    margin-left: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 10, 0.10);
+}
+
+.optional-button{
+    margin-left: 50%;
+    margin-bottom: 5px;
+    margin-top: -20px;  
+}
+
+#optional-button-id{
+    background-color: inherit;
+    border-radius: 10px;
+    border: aliceblue;
+}
+
+.time-search{
+    display: block;
+}
+
+.sort-by-search{
+    margin-top: 10px;
+    margin-left: 43%;
+    max-width: fit-content;
+}
+
+.input-group-text{
+    height: fit-content;
+}
+
+.result{
+    display: flex;
+    border: 1px solid #dadce0;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.result-content{
+    display: block;
+    width: 70%;
+    margin: 10px;
+}
+
+.result-frame-details{
+    display: flex;
+}
+
+.result-published-date{
+    margin-left:auto;
+     margin-right:0;
+}
+
+.result-img{
+    width: 250px;
+    height: 200px;
+    margin: inherit;
+    margin-left: 30px;
+    border-radius: 15px;
+}
+
+.page-num{
+    text-align: center;
+}
