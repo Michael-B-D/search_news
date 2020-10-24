@@ -5,7 +5,7 @@ url = "https://rapidapi.p.rapidapi.com/v1/search"
 
 headers = {
     'x-rapidapi-host': "newscatcher.p.rapidapi.com",
-    'x-rapidapi-key': "d6206439ddmsh11ea8fcac12d762p19a85bjsncff8122bfe9c"
+    'x-rapidapi-key': key
     }
     
 app = Flask(__name__, static_folder="templates", static_url_path="")
