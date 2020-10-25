@@ -1,15 +1,11 @@
 import requests
 import json
 from flask import Flask, render_template, request
-import os
-
-
-KEY = os.environ['API_KEY']
 url = "https://rapidapi.p.rapidapi.com/v1/search"
 
 headers = {
     'x-rapidapi-host': "newscatcher.p.rapidapi.com",
-    'x-rapidapi-key': KEY
+    'x-rapidapi-key': "d6206439ddmsh11ea8fcac12d762p19a85bjsncff8122bfe9c"
     }
     
 app = Flask(__name__, static_folder="templates", static_url_path="")
@@ -54,7 +50,7 @@ def get_results():
                 continue
             all_articles.append({key: value for key, value in article.items() if key in filter_keys_article})
         return render_template(
-            'index.html',
+            'results_page.html',
             filter_results=filter_results,
             all_articles=all_articles,
             status=res['status'],
@@ -66,10 +62,7 @@ def get_results():
             'main_page_no_mach.html',
             status=res['status']
             )
-            # if key error puse the relvant keys to the res
             
-if __name__ == '__main__':     
-    app.run(debug=True)
 
-            # <!-- <p class="all-hits">Total {{filter_results["total_hits"]}} Results:</p> -->
-        # <!-- <p class="page-num">This page number-{{filter_results['page']}} from-{{filter_results["total_pages"]}}, click <a href="?free_text={{free_text}}&page={{filter_results['page']+1}}">here</a> to the next page!</p> -->
+            
+app.run(host= '0.0.0.0', debug=True)

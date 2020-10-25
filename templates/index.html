@@ -80,35 +80,6 @@
                 </ul>
             </div>
         </nav> -->
-        <div class="all-results">
-            <p class="all-hits">Total results: {{filter_results["total_hits"]}}</p>
-            <h3 class="head-results">headlines:</h3>
-            <!-- only one result -->                
-            {% for art in all_articles %}
-            <a href="{{art['link']}}"> 
-                <div class="result" data-result-id="1">
-                    <div class="result-content">
-                        <h3 class="result-title">
-                            <a href="{{art['link']}}">
-                                {{art['title']}}
-                            </a>
-                        </h3>
-                        <div class="result-frame-details">
-                            <div class="result-domain">
-                                {{art['clean_url']}}
-                            </div>
-                            <div class="result-published-date">
-                                published date: {{art['published_date']}}
-                            </div>
-                        </div>
-                    </div>
-                    <img class="result-img" src="{{art['media']}}" alt="image of the news website">
-                </div>
-            </a>  
-            {% endfor %}
-        </div>
-
-        <p class="page-num">This page number-{{filter_results['page']}} from-{{filter_results["total_pages"]}}, click <a href="{{current_url}}&page={{filter_results['page']+1}}">here</a> to the next page!</p>
         <footer>
             <div class="card"><p>this website create with <a href="https://newscatcherapi.com/news-api">Newscatcher API</a> by MBD</p></div>
         </footer>
