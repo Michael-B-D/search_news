@@ -1,12 +1,10 @@
 import requests
 import json
 from flask import Flask, render_template, request
-from dotenv import load_env
 import os
 
 
-load_env()
-KEY = os.environ['KEY']
+KEY = os.environ['API_KEY']
 url = "https://rapidapi.p.rapidapi.com/v1/search"
 
 headers = {
@@ -70,7 +68,7 @@ def get_results():
             )
             # if key error puse the relvant keys to the res
             
-if __name__ == '__main__'         
+if __name__ == '__main__':     
     app.run(host= '0.0.0.0', debug=True)
 
             # <!-- <p class="all-hits">Total {{filter_results["total_hits"]}} Results:</p> -->
