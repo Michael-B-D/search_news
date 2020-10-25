@@ -70,9 +70,8 @@ def get_results():
             )
             # if key error puse the relvant keys to the res
             
-
-            
-app.run(host= '0.0.0.0', debug=True)
+if __name__ == '__main__'         
+    app.run(host= '0.0.0.0', debug=True)
 
             # <!-- <p class="all-hits">Total {{filter_results["total_hits"]}} Results:</p> -->
         # <!-- <p class="page-num">This page number-{{filter_results['page']}} from-{{filter_results["total_pages"]}}, click <a href="?free_text={{free_text}}&page={{filter_results['page']+1}}">here</a> to the next page!</p> -->
