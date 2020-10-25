@@ -1,11 +1,15 @@
 import requests
 import json
 from flask import Flask, render_template, request
+import os
+
+
+KEY = os.environ['API_KEY']
 url = "https://rapidapi.p.rapidapi.com/v1/search"
 
 headers = {
     'x-rapidapi-host': "newscatcher.p.rapidapi.com",
-    'x-rapidapi-key': "d6206439ddmsh11ea8fcac12d762p19a85bjsncff8122bfe9c"
+    'x-rapidapi-key': KEY
     }
     
 app = Flask(__name__, static_folder="templates", static_url_path="")
@@ -62,7 +66,6 @@ def get_results():
             'main_page_no_mach.html',
             status=res['status']
             )
-            
 
             
 app.run(host= '0.0.0.0', debug=True)
