@@ -67,5 +67,5 @@ def get_results():
             status=res['status']
             )
 
-            
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
